@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Docker Compose!</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () =>
+        document.getElementById('getAll').addEventListener('click', () =>
+          fetch('/all')
+            .then(result => result.json())
+            .then(data => document.getElementById('resultArea').textContent = JSON.stringify(data))
+            .catch(err => document.getElementById('resultArea').textContent = err.message)
+          )
+        );
+    </script>
+  </head>
+  <body>
+    <h1>Some docker compose stuffies</h1>
+    <button id="getAll">Fetch</button>
+    <p id="resultArea"></p>
+  </body>
+</html>
