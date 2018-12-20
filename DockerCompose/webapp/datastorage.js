@@ -13,9 +13,10 @@ module.exports  = class Database {
       let connection = mysql.createConnection(this.options);
       connection.query(sql,[...parameters], (err,result) => {
         if(err) {
-          reject(new Error('Statement error:'+err.message))}
+          reject(new Error('Statement error:'+err.message))
       } else {
         resolve(result);
+      }
       });
       connection.end();
     });

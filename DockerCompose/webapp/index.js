@@ -9,7 +9,7 @@ const port    = process.env.PORT || 3000;
 const host    = process.env.HOST || 'localhost';
 
 const options = {
-  'host'  : process.env.DATABASE_HOST || 'localhost';
+  'host'  : process.env.DATABASE_HOST || 'localhost',
   'port'  : 3306,
   'user'  : 'luke',
   'password'  : 'skywalker',
